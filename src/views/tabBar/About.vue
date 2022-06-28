@@ -22,7 +22,7 @@
 import { fetchUserInfo } from '@/api/authController'
 import { useAuthStore } from '@/store/auth'
 
-const auth = useAuthStore()
+const auth: any = useAuthStore()
 
 const jumpUrl = () => {
 	window.location.href = `${auth.userInfo.projectAddress}`
