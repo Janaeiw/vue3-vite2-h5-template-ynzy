@@ -58,7 +58,7 @@ export default [
 			const info = {
 				author: 'ZhongJunWei',
 				avatar: 'https://avatars.githubusercontent.com/u/39397772?s=60&v=4',
-				projectAddress: 'https://github.com/ynzy/vue3-ts-wx-h5-template',
+				projectAddress: 'https://github.com/zhongjunwei/vite-vue3-h5-template',
 				demoUrl: 'https://vue3-ts-wx-h5-template.vercel.app/',
 				demoCodeUrl: 'https://files.catbox.moe/lxle3w.png'
 			}
