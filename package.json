@@ -52,14 +52,5 @@
     "vite-plugin-style-import": "^1.4.1",
     "vue-global-api": "^0.4.1",
     "vue-tsc": "^0.29.8"
-  },
-  "lint-staged": {
-    "src/**/*.{scss,css,less}": [
-      "git add"
-    ],
-    "src/**/*.{js,vue,jsx}": [
-      "eslint --fix",
-      "git add"
-    ]
   }
 }

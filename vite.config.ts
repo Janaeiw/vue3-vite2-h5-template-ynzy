@@ -29,9 +29,7 @@ export default defineConfig(({ command, mode }: ConfigEnv) => {
 	return {
 		base: VITE_PUBLIC_PATH,
 		root,
-    plugins: [
-      createVitePlugins(viteEnv, isBuild),
-    ],
+		plugins: [createVitePlugins(viteEnv, isBuild)],
 		resolve: {
 			alias: {
 				'@': fileURLToPath(new URL('./src', import.meta.url))
