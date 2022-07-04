@@ -14,17 +14,17 @@
     "noImplicitAny": false,
     "paths": {
       "@/*": ["src/*"],
-      "#/*": [ "types/*" ]
+      "#/*": ["types/*"]
     },
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
     "skipLibCheck": true
   },
   "include": [
-    "vite.config.*", 
-    "env.d.ts", 
-    "src/**/*", 
+    "vite.config.*",
+    "env.d.ts",
+    "src/**/*",
     "src/**/*.vue",
-    "mock/**/*.ts", 
+    "mock/**/*.ts",
     "types/**/*.d.ts",
   ],
   "exclude": [

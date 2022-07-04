@@ -21,7 +21,7 @@
     "pinia": "^2.0.9",
     "pinia-plugin-persistedstate": "^1.0.3",
     "vant": "^3.5.2",
-    "vue": "^3.2.26",
+    "vue": "^3.2.37",
     "vue-request": "^1.2.3",
     "vue-router": "^4.0.12",
     "weixin-js-sdk": "^1.6.0"

@@ -6,8 +6,6 @@ import { wrapperEnv } from './build/utils'
 import { createVitePlugins } from './build/vite/plugin'
 import { createProxy } from './build/vite/proxy'
 import { createBuild } from './build/vite/build'
-// import vue from "@vitejs/plugin-vue";
-// import styleImport, { VantResolve } from "vite-plugin-style-import";
 
 const { dependencies, devDependencies, name, version } = pkg
 // 应用信息
@@ -48,7 +46,7 @@ export default defineConfig(({ command, mode }: ConfigEnv) => {
 		},
 		server: {
 			host: true,
-			proxy: createProxy()
+			proxy: createProxy(viteEnv)
 		},
 		build: createBuild(viteEnv),
 		define: {

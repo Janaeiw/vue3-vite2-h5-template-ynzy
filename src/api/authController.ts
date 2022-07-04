@@ -11,3 +11,13 @@ export const fetchUserInfo = () => {
 		loading: true
 	})
 }
+
+// 登录
+export function login(data: any) {
+	return request({
+		url: '/login',
+		method: 'POST',
+		data,
+		loading: true
+	})
+}

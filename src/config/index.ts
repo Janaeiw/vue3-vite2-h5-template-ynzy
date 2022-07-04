@@ -4,7 +4,7 @@ export interface IConfig {
 	title: string // 项目title
 	baseUrl?: string // 项目地址
 	baseApi?: string // api请求地址
-	APPID?: string // 公众号appId  一般放在服务器端
+	APPID?: string // 公众号appId 一般放在服务器端
 	APPSECRET?: string // 公众号appScript 一般放在服务器端
 	$cdn: string // cdn公共资源路径
 }

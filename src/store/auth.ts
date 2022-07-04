@@ -19,10 +19,10 @@ export const useAuthStore = defineStore({
 		saveUserInfo(data: any) {
 			this.$state.userInfo = data
 		},
-		setIsAuth(data) {
+		setIsAuth(data: any) {
 			this.$state.isAuth = data
 		},
-		setCode(code) {
+		setCode(code: any) {
 			this.$state.code = code
 		}
 	},

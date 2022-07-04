@@ -1,23 +1,27 @@
 /**
+ * @name  AutoRegistryComponents
+ * @description 按需加载，自动引入组件
  *  Introduces component library styles on demand.
  * https://github.com/antfu/unplugin-vue-components
  */
+
 import Components from 'unplugin-vue-components/vite'
-import ViteComponents, { VantResolver } from 'unplugin-vue-components/resolvers'
+import { VueUseComponentsResolver, VantResolver } from 'unplugin-vue-components/resolvers'
 
 export function configAutoComponentsPlugin() {
 	return Components({
 		// 指定组件位置，默认是src/components
 		dirs: ['src/components'],
 		// ui库解析器
-		resolvers: [VantResolver()],
-		extensions: ['vue', 'tsx'],
+		resolvers: [VueUseComponentsResolver(), VantResolver()],
+		extensions: ['vue', 'tsx', 'md'],
 		// 配置文件生成位置
-		dts: 'src/components.d.ts',
+		dts: 'types/components.d.ts',
 		// 搜索子目录
 		deep: true,
 		// 允许子目录作为组件的命名空间前缀。
 		directoryAsNamespace: false
-		// include:[]
+		// include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+		// exclude: [/[\\/]node_modules[\\/]/, /[\\/]\.git[\\/]/, /[\\/]\.nuxt[\\/]/],
 	})
 }

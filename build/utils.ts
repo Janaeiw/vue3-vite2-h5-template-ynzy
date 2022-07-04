@@ -1,11 +1,8 @@
-import fs from 'fs'
-import path from 'path'
-
 /**
  * 是否是 dev 环境
  * @export
  * @param {string} mode
- * @return {*}  {boolean}
+ * @return {*} {boolean}
  */
 export function isDevFn(mode: string): boolean {
 	return mode === 'development'
@@ -15,7 +12,7 @@ export function isDevFn(mode: string): boolean {
  *  是否是 prod 环境
  * @export
  * @param {string} mode
- * @return {*}  {boolean}
+ * @return {*} {boolean}
  */
 export function isProdFn(mode: string): boolean {
 	return mode === 'production'

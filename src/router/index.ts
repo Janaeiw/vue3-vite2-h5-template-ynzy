@@ -18,11 +18,13 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
 	const authStore = useAuthStore()
+
 	setDocumentTitle(to.meta.title as string)
 	//! 解决ios微信下，分享签名不成功的问题,将第一次的进入的url缓存起来。
 	if (window.entryUrl === undefined) {
 		window.entryUrl = location.href.split('#')[0]
 	}
+
 	const { code } = getQueryParams<IQueryParams>()
 	// 微信浏览器内微信授权登陆
 	if (isWeChat()) {

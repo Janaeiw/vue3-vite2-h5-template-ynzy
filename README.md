@@ -858,7 +858,8 @@ service.interceptors.request.use(
     if (config.loading) {
       Toast.loading({
         message: '加载中...',
-        forbidClick: true
+        forbidClick: true,
+        duration: 0
       })
     }
     // 在此处添加请求头等，如添加 token
@@ -895,7 +896,7 @@ service.interceptors.response.use(
       return Promise.reject(new Error(res.msg || 'Error'))
     } else {
       // 注意返回值
-      return response.data
+      return Promise.resolve(res)
     }
   },
   (error: any) => {
@@ -947,9 +948,9 @@ service.interceptors.response.use(
       }
       error.message = '连接到服务器失败，请联系管理员'
     }
-    Toast(error.message)
+    Toast.fail(error.message)
     // store.auth.clearAuth()
-    store.dispatch('clearAuth')
+    // store.dispatch('clearAuth')
     return Promise.reject(error)
   }
 )
@@ -1505,5 +1506,4 @@ npx husky add .husky/pre-commit "npx lint-staged" // pre-commit 执行 npx lint-
 - | - proxy.ts 代理配置
 - utils 工具函数
 ```
-"# vite-vue3-h5-template" 
-"# vite-vue3-h5-template" 
+"# vite-vue3-h5-template"

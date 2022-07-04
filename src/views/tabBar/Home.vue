@@ -13,6 +13,7 @@
 </template>
 <script lang="ts">
 // import { defineComponent } from 'vue'
+// import { login } from "@/api/authController"
 export default defineComponent({
 	name: 'Home',
 	props: {},

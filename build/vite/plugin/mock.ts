@@ -1,7 +1,10 @@
 /**
+ * @name ConfigMockPlugin
+ * @description 引入mockjs，本地模拟接口
  * Mock plugin for development and production.
  * https://github.com/anncwb/vite-plugin-mock
  */
+
 import { viteMockServe } from 'vite-plugin-mock'
 
 export function configMockPlugin(isBuild: boolean) {
