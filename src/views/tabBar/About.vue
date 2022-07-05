@@ -2,9 +2,9 @@
 <template>
 	<div class="about_container">
 		<div class="item avatar">
-			<van-image width="100" height="100" round src="https://img01.yzcdn.cn/vant/cat.jpeg" />
+			<van-image width="100" height="100" round src="/public/touxiang.jpg" />
 		</div>
-		<div class="item author">项目作者：{{ auth.userInfo.author }}</div>
+		<div class="item author">项目作者：{{ auth.userInfo.author || 'Janaeiw' }}</div>
 		<div class="item author">
 			<p class="label">微信授权code码:</p>
 			<p>{{ auth.code || '请使用微信浏览器查看' }}</p>
