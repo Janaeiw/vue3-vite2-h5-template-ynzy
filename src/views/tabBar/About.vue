@@ -2,7 +2,7 @@
 <template>
 	<div class="about_container">
 		<div class="item avatar">
-			<van-image width="100" height="100" round src="/public/touxiang.jpg" />
+			<van-image width="100" height="100" round src="/public/images/avatar.jpg" />
 		</div>
 		<div class="item author">项目作者：{{ auth.userInfo.author || 'Janaeiw' }}</div>
 		<div class="item author">
