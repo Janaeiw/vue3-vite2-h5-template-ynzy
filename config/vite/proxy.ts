@@ -6,7 +6,7 @@
  */
 
 export function createProxy(viteEnv: any) {
-	const { VITE_APP_BASE_API, VITE_APP_BASE_HOST } = viteEnv
+	const { VITE_API_BASE_URL, VITE_API_TARGET_URL } = viteEnv
 
 	return {
 		// 字符串简写写法
@@ -17,10 +17,11 @@ export function createProxy(viteEnv: any) {
 			changeOrigin: true,
 			rewrite: (path: any) => path.replace(/^\/api/, '')
 		},
-		[VITE_APP_BASE_API]: {
-			target: VITE_APP_BASE_HOST,
+		[VITE_API_BASE_URL]: {
+			target: VITE_API_TARGET_URL,
 			changeOrigin: true,
 			rewrite: (path: any) => path.replace(/^\/webapi/, '')
+			// rewrite: (path: any) => path.replace(new RegExp(`^${VITE_API_BASE_URL}`), ''),
 		},
 		// 正则表达式写法
 		'^/fallback/.*': {

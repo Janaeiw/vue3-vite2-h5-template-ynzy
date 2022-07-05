@@ -3,7 +3,6 @@
  */
 import store from '@/store'
 import axios, { AxiosResponse, AxiosRequestConfig } from 'axios'
-// import { Message, Modal } from 'view-design' // UI组件库
 import { Dialog, Toast } from 'vant'
 // 根据环境不同引入不同api地址
 import { config } from '@/config'

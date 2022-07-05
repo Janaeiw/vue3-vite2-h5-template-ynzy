@@ -1,7 +1,5 @@
 <!-- about -->
 <template>
-	<!-- <router-link to="/rem">Rem</router-link> | -->
-	<!-- <router-link to="/scssConfig">scssConfig</router-link> -->
 	<div class="about_container">
 		<div class="item avatar">
 			<van-image width="100" height="100" round src="https://img01.yzcdn.cn/vant/cat.jpeg" />

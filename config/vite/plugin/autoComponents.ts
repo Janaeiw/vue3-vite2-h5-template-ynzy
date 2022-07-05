@@ -1,7 +1,6 @@
 /**
  * @name AutoRegistryComponents
  * @description 按需加载，自动引入组件
- * Introduces component library styles on demand.
  * https://github.com/antfu/unplugin-vue-components
  */
 

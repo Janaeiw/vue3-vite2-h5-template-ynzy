@@ -9,7 +9,7 @@ export function isDevFn(mode: string): boolean {
 }
 
 /**
- *  是否是 prod 环境
+ * 是否是 prod 环境
  * @export
  * @param {string} mode
  * @return {*} {boolean}

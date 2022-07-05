@@ -2,10 +2,10 @@ import { fileURLToPath } from 'url'
 import pkg from './package.json'
 import dayjs from 'dayjs'
 import { defineConfig, ConfigEnv, loadEnv } from 'vite'
-import { wrapperEnv } from './build/utils'
-import { createVitePlugins } from './build/vite/plugin'
-import { createProxy } from './build/vite/proxy'
-import { createBuild } from './build/vite/build'
+import { wrapperEnv } from './config/utils'
+import { createVitePlugins } from './config/vite/plugin'
+import { createProxy } from './config/vite/proxy'
+import { createBuild } from './config/vite/build'
 
 const { dependencies, devDependencies, name, version } = pkg
 // 应用信息
@@ -21,7 +21,6 @@ export default defineConfig(({ command, mode }: ConfigEnv) => {
 	const env = loadEnv(mode, root) // 加载env环境
 	// The boolean type read by loadEnv is a string. This function can be converted to boolean type
 	const viteEnv = wrapperEnv(env)
-	// console.log('viteEnv', viteEnv)
 
 	const { VITE_PUBLIC_PATH, VITE_OUTPUT_DIR } = viteEnv
 	return {
