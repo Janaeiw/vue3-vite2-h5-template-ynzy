@@ -49,13 +49,13 @@ service.interceptors.response.use(
 		// await new Promise(resovle => setTimeout(resovle, 3000))
 		Toast.clear()
 		const res = response.data
-		if (res.code !== 0) {
+		if (res.retcode !== 0) {
 			// token 过期
-			if (res.code === 401) {
+			if (res.retcode === 401) {
 				// 警告提示窗
 				return
 			}
-			if (res.code == 403) {
+			if (res.retcode == 403) {
 				Dialog.alert({
 					title: '警告',
 					message: res.msg

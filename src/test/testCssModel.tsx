@@ -5,7 +5,7 @@ export default defineComponent({
 		console.log('css--model', classes)
 
 		return () => {
-			return <div class={`root  ${classes.moduleClass}`}>测试css-modules</div>
+			return <div class={`root ${classes.moduleClass}`}>测试css-modules</div>
 		}
 	}
 })

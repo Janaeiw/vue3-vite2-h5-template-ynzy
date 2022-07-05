@@ -4,7 +4,7 @@
 		<div class="warpper">
 			<h1 class="demo-home__title">
 				<!-- <img src="https://imgs.solui.cn/weapp/logo.png" /> -->
-				<span>vite2 VUE3 H5开发模板</span>
+				<span>vite2 Vue3 H5开发模板</span>
 			</h1>
 			<h2 class="demo-home__desc">A vue h5 template with Vant UI</h2>
 		</div>
@@ -13,7 +13,6 @@
 </template>
 <script lang="ts">
 // import { defineComponent } from 'vue'
-// import { login } from "@/api/authController"
 export default defineComponent({
 	name: 'Home',
 	props: {},
@@ -40,7 +39,8 @@ export default defineComponent({
 			'vconsole 移动端调试',
 			'本地存储 storage 封装',
 			'Eslint+Pettier 统一开发规范',
-			'husky + lint-staged 提交校验'
+			'husky + lint-staged 提交校验',
+			'directive自定义指令按钮权限'
 		]
 		return {
 			list
@@ -50,6 +50,8 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
 .home-container {
+	padding-bottom: 60px;
+
 	.warpper {
 		padding: 12px;
 		background: #fff;

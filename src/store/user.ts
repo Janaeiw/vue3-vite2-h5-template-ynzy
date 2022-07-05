@@ -24,7 +24,7 @@ export const useUserStore = defineStore({
 	persist: {
 		key: 'user',
 		storage: window.localStorage,
-		paths: ['name'],
-		overwrite: true
+		paths: ['name']
+		// overwrite: true
 	}
 })

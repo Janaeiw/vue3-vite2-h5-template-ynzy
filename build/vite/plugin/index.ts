@@ -9,7 +9,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 import { configStyleImportPlugin } from './styleImport'
 import { configMockPlugin } from './mock'
 import { configAutoImportPlugin } from './autoImport'
-import { configAutoComponentsPlugin } from './autocomponents'
+import { configAutoComponentsPlugin } from './autoComponents'
 import { configCompressPlugin } from './compress'
 export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
 	const { VITE_ENV, VITE_USE_MOCK, VITE_BUILD_COMPRESS, VITE_BUILD_COMPRESS_DELETE_ORIGIN_FILE } =

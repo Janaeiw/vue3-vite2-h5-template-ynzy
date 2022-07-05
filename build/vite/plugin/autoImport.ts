@@ -1,7 +1,7 @@
 /**
  * @name AutoImportDeps
  * @description 按需加载，自动引入
- *  Introduces component library styles on demand.
+ * Introduces component library styles on demand.
  * https://github.com/antfu/unplugin-auto-import
  */
 

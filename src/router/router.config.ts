@@ -76,6 +76,18 @@ export const routes: Array<RouteRecordRaw> = [
 				name: 'TestComponent',
 				component: () => import('@/test/testComponent.vue'),
 				meta: { title: '测试全局组件', keepAlive: false, showTab: false }
+			},
+			{
+				path: '/testBtnAuth',
+				name: 'TestBtnAuth',
+				component: () => import('@/test/testBtnAuth.vue'),
+				meta: { title: '测试按钮权限', keepAlive: false, showTab: false }
+			},
+			{
+				path: '/testApi',
+				name: 'TestApi',
+				component: () => import('@/test/testApi.vue'),
+				meta: { title: '测试api代理调试', keepAlive: false, showTab: false }
 			}
 		]
 	}

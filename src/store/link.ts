@@ -18,8 +18,8 @@ export const useLinkStore = defineStore({
 	// 开启数据缓存
 	persist: {
 		key: 'link',
-		storage: window.localStorage,
+		storage: window.localStorage
 		// paths: ['name'],
-		overwrite: true
+		// overwrite: true
 	}
 })

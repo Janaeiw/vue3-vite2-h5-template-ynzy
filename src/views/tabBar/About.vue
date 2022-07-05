@@ -18,7 +18,6 @@
 	</div>
 </template>
 <script setup lang="ts">
-// import { onMounted } from 'vue'
 import { fetchUserInfo } from '@/api/authController'
 import { useAuthStore } from '@/store/auth'
 

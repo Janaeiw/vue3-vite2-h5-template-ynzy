@@ -1,7 +1,10 @@
 /**
- * Generate proxy
+ * @name createProxy
+ * @description vite-api代理配置
  * @param viteEnv
+ * https://vitejs.cn/config/#build-lib
  */
+
 export function createProxy(viteEnv: any) {
 	const { VITE_APP_BASE_API, VITE_APP_BASE_HOST } = viteEnv
 
