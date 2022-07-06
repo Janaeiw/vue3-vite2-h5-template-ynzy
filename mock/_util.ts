@@ -4,8 +4,8 @@ import { Recordable } from 'vite-plugin-mock'
 
 export function resultSuccess<T = Recordable>(data: T, { message = 'ok' } = {}) {
 	return {
-		code: 0,
-		data,
+		retcode: 0,
+		result: data,
 		message,
 		type: 'success'
 	}

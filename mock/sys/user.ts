@@ -62,13 +62,7 @@ export default [
 				demoUrl: 'https://vue3-ts-wx-h5-template.vercel.app/',
 				demoCodeUrl: 'https://files.catbox.moe/lxle3w.png'
 			}
-			// return resultSuccess(info)
-			return {
-				retcode: 0,
-				result: {
-					...info
-				}
-			}
+			return resultSuccess(info)
 		}
 	}
 ] as MockMethod[]
