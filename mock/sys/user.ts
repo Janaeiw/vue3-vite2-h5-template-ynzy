@@ -58,9 +58,7 @@ export default [
 			const info = {
 				author: 'Janaeiw',
 				avatar: '/images/avatar.jpg',
-				projectAddress: 'https://github.com/zhongjunwei/vue3-vite2-h5-template-ynzy',
-				demoUrl: 'https://vue3-ts-wx-h5-template.vercel.app/',
-				demoCodeUrl: 'https://files.catbox.moe/lxle3w.png'
+				projectAddress: 'https://github.com/Janaeiw/vue3-vite2-h5-template-ynzy'
 			}
 			return resultSuccess(info)
 		}
