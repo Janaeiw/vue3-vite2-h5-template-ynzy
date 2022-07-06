@@ -46,7 +46,7 @@ const fakeCodeList: any = {
 
 export default [
 	{
-		url: '/user/info',
+		url: '/webapi/user/info',
 		method: 'get',
 		response: (request: requestParams) => {
 			// const token = getRequestToken(request);
@@ -56,13 +56,19 @@ export default [
 			//   return resultError('The corresponding user information was not obtained!')
 			// }
 			const info = {
-				author: 'ZhongJunWei',
-				avatar: 'https://avatars.githubusercontent.com/u/39397772?s=60&v=4',
-				projectAddress: 'https://github.com/zhongjunwei/vite-vue3-h5-template',
+				author: 'Janaeiw',
+				avatar: '/images/avatar.jpg',
+				projectAddress: 'https://github.com/zhongjunwei/vue3-vite2-h5-template-ynzy',
 				demoUrl: 'https://vue3-ts-wx-h5-template.vercel.app/',
 				demoCodeUrl: 'https://files.catbox.moe/lxle3w.png'
 			}
-			return resultSuccess(info)
+			// return resultSuccess(info)
+			return {
+				retcode: 0,
+				result: {
+					...info
+				}
+			}
 		}
 	}
 ] as MockMethod[]

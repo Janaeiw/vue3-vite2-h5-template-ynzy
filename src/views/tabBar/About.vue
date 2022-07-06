@@ -2,9 +2,9 @@
 <template>
 	<div class="about_container">
 		<div class="item avatar">
-			<van-image width="100" height="100" round src="/images/avatar.jpg" />
+			<van-image width="100" height="100" round :src="auth.userInfo.avatar" />
 		</div>
-		<div class="item author">项目作者：{{ auth.userInfo.author || 'Janaeiw' }}</div>
+		<div class="item author">项目作者：{{ auth.userInfo.author }}</div>
 		<div class="item author">
 			<p class="label">微信授权code码:</p>
 			<p>{{ auth.code || '请使用微信浏览器查看' }}</p>
@@ -26,12 +26,10 @@ const jumpUrl = () => {
 }
 onMounted(async () => {
 	try {
-		const res = await fetchUserInfo()
-
-		if (res.code !== 0) return new Error(res.msg)
-		console.log(res.data)
-
-		auth.saveUserInfo(res.data)
+		const res: any = await fetchUserInfo()
+		console.log(res)
+		if (res.retcode !== 0) return new Error(res.msg)
+		auth.saveUserInfo(res.result)
 	} catch (error) {
 		console.log(error)
 	}
@@ -54,6 +52,7 @@ onMounted(async () => {
 	.url {
 		color: #4ca9f2;
 		font-size: 14px;
+		margin: 15px 30px;
 
 		.label {
 			text-align: center;
