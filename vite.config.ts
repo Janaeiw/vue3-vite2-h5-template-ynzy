@@ -47,7 +47,7 @@ export default defineConfig(({ command, mode }: ConfigEnv) => {
 			host: true,
 			proxy: createProxy(viteEnv)
 		},
-		build: createBuild(viteEnv),
+		build: <any>createBuild(viteEnv),
 		define: {
 			__APP_INFO__: JSON.stringify(__APP_INFO__)
 		}

@@ -20,8 +20,7 @@ export function createProxy(viteEnv: any) {
 		[VITE_API_BASE_URL]: {
 			target: VITE_API_TARGET_URL,
 			changeOrigin: true,
-			rewrite: (path: any) => path.replace(/^\/webapi/, '')
-			// rewrite: (path: any) => path.replace(new RegExp(`^${VITE_API_BASE_URL}`), ''),
+			rewrite: (path: any) => path.replace(new RegExp(`^${VITE_API_BASE_URL}`), '')
 		},
 		// 正则表达式写法
 		'^/fallback/.*': {

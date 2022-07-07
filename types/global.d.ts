@@ -35,6 +35,8 @@ declare global {
 		VITE_OUTPUT_DIR: string
 		VITE_PUBLIC_PATH: string
 		VITE_USE_MOCK: boolean
+		VITE_API_BASE_URL: string
+		VITE_API_TARGET_URL: string
 		VITE_BUILD_COMPRESS: 'gzip' | 'brotli' | 'none'
 		VITE_BUILD_COMPRESS_DELETE_ORIGIN_FILE: boolean
 	}
