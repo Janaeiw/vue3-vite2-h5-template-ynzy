@@ -24,8 +24,8 @@ export default defineConfig(({ command, mode }: ConfigEnv) => {
 
 	const { VITE_PUBLIC_PATH, VITE_OUTPUT_DIR } = viteEnv
 	return {
+		root: root,
 		base: VITE_PUBLIC_PATH,
-		root,
 		plugins: [createVitePlugins(viteEnv, isBuild)],
 		resolve: {
 			alias: {
