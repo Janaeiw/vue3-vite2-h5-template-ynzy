@@ -1505,6 +1505,8 @@ npx husky add .husky/pre-commit "npx lint-staged" // pre-commit 执行 npx lint-
 - utils 工具函数
 ```
 
+[▲ 回顶部](#top)
+
 ## <span id="directive">✅ 自定义指令 按钮权限 </span>
 * 声明一组可用于组件实例中的指令
 * directive 文件夹目录
