@@ -1516,18 +1516,7 @@ npx husky add .husky/pre-commit "npx lint-staged" // pre-commit 执行 npx lint-
 - | - buttonAuth.ts 按钮权限配置
 - index.ts 动态引入模块方法
 ```
-* main.ts 导入方法
-```js
-import { createApp } from 'vue'
-import App from './App.vue'
-const app = createApp(App)
-import directives from './directive/index.js'
-directives.buttonAuth(app)
-app.mount('#app')
-```
-* index.ts 使用方法
-```js
-<div v-auth:create="{ fn: handleBtn, params: true }">按 钮</div>
-```
+* main.ts 自定义指令导入方法
+* src/views/test/testBtnAuth.vue 使用案例
 
 "# vite-vue3-h5-template"
