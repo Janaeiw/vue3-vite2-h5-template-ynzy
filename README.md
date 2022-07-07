@@ -1,8 +1,8 @@
+# 前述
 🎉 基于 vite2 + Vue3.2 + TypeScript + pinia + mock + sass + vantUI + viewport 适配 + axios 封装 的基础模版
 
 <!-- [查看 demo](https://vite-vue3-h5-template.vercel.app/) 建议手机端查看 -->
 
-# 前述
 * 用了 vite 的都说真香，到底有多香呢。我们先来看下重构后的开发启动速度，热更新速度，打包速度的对比吧
 
 # 原来 vuecli 项目和现在 vite-vue 项目开发/生产速度对比
