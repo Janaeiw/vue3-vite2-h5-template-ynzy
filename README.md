@@ -1519,4 +1519,4 @@ npx husky add .husky/pre-commit "npx lint-staged" // pre-commit 执行 npx lint-
 * main.ts 自定义指令导入方法
 * src/views/test/testBtnAuth.vue 使用案例
 
-"# vite-vue3-h5-template"
+如果对你有帮助送我一颗珍贵的小星星（づ￣ 3 ￣）づ ╭❤ ～
