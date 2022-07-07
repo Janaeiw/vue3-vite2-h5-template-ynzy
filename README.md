@@ -1,15 +1,8 @@
-
-
-
 🎉 基于 vite2 + Vue3.2 + TypeScript + pinia + mock + sass + vantUI + viewport 适配 + axios 封装 的基础模版
 
-[查看 demo](https://vite-vue3-h5-template.vercel.app/) 建议手机端查看
+<!-- [查看 demo](https://vite-vue3-h5-template.vercel.app/) 建议手机端查看 -->
 
 # 前述
-* vuecli项目地址：https://github.com/ynzy/vue3-h5-template
-* vite-vue项目地址：https://github.com/ynzy/vite-vue3-h5-template
-* 一年前 vue3 刚出来没大会，用 vuecli 写了一个模版项目，文章地址：[基于Vue3+TypeScript+ Vue-Cli4.0构建手机端模板脚手架](https://juejin.cn/post/6931630327211229198)
-* 去年尤大新作 vite 登上了热门，利用下班时间，花了8个晚上，每个晚上写了 2-3 小时对我的模版项目进行了重构。
 * 用了 vite 的都说真香，到底有多香呢。我们先来看下重构后的开发启动速度，热更新速度，打包速度的对比吧
 
 # 原来 vuecli 项目和现在 vite-vue 项目开发/生产速度对比
@@ -20,12 +13,14 @@
 
     -   等了几秒 
     
+
 ![vuecli开发启动速度.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8685bc5c4c364e9387d5b02d712820f7~tplv-k3u1fbpfcp-watermark.image?)
 
 -   vite-vue
 
     -   几乎没等待 
     
+
 ![vite开发启动速度.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/24f9914377c14302ade61cc62dd41b5a~tplv-k3u1fbpfcp-watermark.image?)
 
 -   总结：vite 启动速度 是 vue-cli 的 **5倍**！
@@ -36,12 +31,14 @@
 
     -   需要重新编译文件 
     
+
 ![vuelciHMR热更新速度.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/af25e09c8fd94134bea673e09b0c2d02~tplv-k3u1fbpfcp-watermark.image?)
 
 -   vite-vue
 
     -   几乎没有花时间，代码改了就生效了
     
+
 ![viteHMR热更新速度.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3deeac46eb1448fba50550292dd31a9d~tplv-k3u1fbpfcp-watermark.image?)
 
 -   总结：vite 即时生效
@@ -99,6 +96,7 @@ pnpm preview  // 本地预览打包的项目
 - [√ Eslint + Prettier 统一开发规范](#prettier)
 - [√ husky + lint-staged 提交校验](#husky)
 - [√ 项目打包优化](#build)
+- [√ 自定义指令 按钮权限](#directive)
 
 ## <span id="createVue">✅ 使用 create-vue 初始化项目 </span>
 
@@ -1506,4 +1504,28 @@ npx husky add .husky/pre-commit "npx lint-staged" // pre-commit 执行 npx lint-
 - | - proxy.ts 代理配置
 - utils 工具函数
 ```
+
+## <span id="directive">✅ 自定义指令 按钮权限 </span>
+* 声明一组可用于组件实例中的指令
+* directive 文件夹目录
+```js
+- directive
+- modules 模块化
+- | - buttonAuth.ts 按钮权限配置
+- index.ts 动态引入模块方法
+```
+* main.ts 导入方法
+```js
+import { createApp } from 'vue'
+import App from './App.vue'
+const app = createApp(App)
+import directives from './directive/index.js'
+directives.buttonAuth(app)
+app.mount('#app')
+```
+* index.ts 使用方法
+```js
+<div v-auth:create="{ fn: handleBtn, params: true }">按 钮</div>
+```
+
 "# vite-vue3-h5-template"
