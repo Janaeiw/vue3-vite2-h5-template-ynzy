@@ -21,17 +21,6 @@ import { useAuthStore } from '@/store/auth'
 import { Toast } from 'vant'
 
 const auth: any = useAuthStore()
-interface FormsType {
-	account?: string
-	password?: string
-	type?: string
-}
-
-const forms: FormsType = {
-	account: 'frontend@cpapi.com',
-	password: 'Password123',
-	type: 'PASSWORD'
-}
 
 const jumpUrl = () => {
 	window.location.href = `${auth.userInfo.projectAddress}`
@@ -45,7 +34,9 @@ onMounted(async () => {
 			auth.saveUserInfo(res.result)
 		} else {
 			const data = {
-				...forms
+				account: 'frontend@cpapi.com',
+				password: 'Password123',
+				type: 'PASSWORD'
 			}
 			login(data)
 				.then((res: any) => {
