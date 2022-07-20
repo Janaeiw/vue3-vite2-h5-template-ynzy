@@ -1,5 +1,5 @@
 # 前述
-🎉 基于 vite2 + Vue3.2 + TypeScript + pinia + mock + sass + vantUI + viewport 适配 + axios 封装 的基础模版
+🎉 基于 vite2 + Vue3.2 + TypeScript + pinia + mock + sass + vantUI + viewport 适配 + axios 封装 的基础模版，想查看模板 demo 的可以[点这里](https://janaeiw.github.io/vue3-vite2-h5-template-ynzy/)
 
 <!-- [查看 demo](https://vite-vue3-h5-template.vercel.app/) 建议手机端查看 -->
 
