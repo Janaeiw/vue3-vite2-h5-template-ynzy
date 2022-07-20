@@ -16,20 +16,52 @@
 	</div>
 </template>
 <script setup lang="ts">
-import { fetchUserInfo } from '@/api/authController'
+import { fetchUserInfo, login } from '@/api/authController'
 import { useAuthStore } from '@/store/auth'
+import { Toast } from 'vant'
 
 const auth: any = useAuthStore()
+interface FormsType {
+	account?: string
+	password?: string
+	type?: string
+}
+
+const forms: FormsType = {
+	account: 'frontend@cpapi.com',
+	password: 'Password123',
+	type: 'PASSWORD'
+}
 
 const jumpUrl = () => {
 	window.location.href = `${auth.userInfo.projectAddress}`
 }
+
 onMounted(async () => {
 	try {
-		const res: any = await fetchUserInfo()
-		console.log(res)
-		if (res.retcode !== 0) return new Error(res.msg)
-		auth.saveUserInfo(res.result)
+		if (import.meta.env.MODE == 'development') {
+			const res: any = await fetchUserInfo()
+			if (res.retcode !== 0) return new Error(res.msg)
+			auth.saveUserInfo(res.result)
+		} else {
+			const data = {
+				...forms
+			}
+			login(data)
+				.then((res: any) => {
+					if (res) {
+						Toast.success('登录成功')
+						auth.saveUserInfo({
+							author: 'Janaeiw',
+							avatar: '/vue3-vite2-h5-template-ynzy/images/avatar.jpg',
+							projectAddress: 'https://github.com/Janaeiw/vue3-vite2-h5-template-ynzy'
+						})
+					}
+				})
+				.catch((err) => {
+					Toast.fail(err)
+				})
+		}
 	} catch (error) {
 		console.log(error)
 	}

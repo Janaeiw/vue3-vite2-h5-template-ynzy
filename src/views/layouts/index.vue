@@ -4,7 +4,7 @@ import { ITabList } from '@/components/TabBar.vue'
 // import { reactive, watch, ref } from 'vue'
 // 测试husky
 const route = useRoute()
-console.log(route.meta)
+// console.log(route.meta)
 const tabbars: Array<ITabList> = reactive([
 	{ title: '首页', to: '/home', icon: 'home-o' },
 	{ title: '项目信息', to: '/pkgInfo', icon: 'label-o' },
