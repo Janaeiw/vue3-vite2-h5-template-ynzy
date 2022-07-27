@@ -16,11 +16,12 @@ body,
 }
 
 #__vconsole {
-  display: none;
+  display: block;
 }
 
 .fixIphonex {
   padding-bottom: $safe-bottom !important;
+
   &::after {
     content: '';
     position: fixed;
@@ -38,8 +39,10 @@ body,
   .app-container {
     padding-bottom: calc(env(safe-area-inset-bottom) + 50px); // 这里是重点
   }
+
   .bottom-button-box {
     bottom: env(safe-area-inset-bottom); // 这里是重点
+
     &:after {
       content: '';
       height: env(safe-area-inset-bottom); // 这里是重点

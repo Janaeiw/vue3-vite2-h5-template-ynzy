@@ -11,6 +11,7 @@ import { configMockPlugin } from './mock'
 import { configAutoImportPlugin } from './autoImport'
 import { configAutoComponentsPlugin } from './autoComponents'
 import { configCompressPlugin } from './compress'
+import { ConfigVConsole } from './vConsole'
 export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
 	const { VITE_ENV, VITE_USE_MOCK, VITE_BUILD_COMPRESS, VITE_BUILD_COMPRESS_DELETE_ORIGIN_FILE } =
 		viteEnv
@@ -34,6 +35,9 @@ export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
 
 	// vite-plugin-mock
 	VITE_USE_MOCK && vitePlugins.push(configMockPlugin(isBuild))
+
+	// vite-plugin-vconsole
+	vitePlugins.push(ConfigVConsole(isBuild))
 
 	// The following plugins only work in the production environment
 	if (isBuild) {

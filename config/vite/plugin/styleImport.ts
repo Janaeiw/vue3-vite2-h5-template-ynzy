@@ -6,7 +6,7 @@
 
 import styleImport, { VantResolve } from 'vite-plugin-style-import'
 
-export function configStyleImportPlugin(isBuild: boolean) {
+export function configStyleImportPlugin(_isBuild: Boolean) {
 	return styleImport({
 		resolves: [VantResolve()],
 		libs: [
