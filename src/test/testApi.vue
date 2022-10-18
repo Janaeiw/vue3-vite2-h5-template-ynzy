@@ -1,8 +1,8 @@
 <!--
  * @Author: ZhongJunWei
  * @Date: 2022/07/05 09:37
- * @LastEditTime: 2022/07/05 09:48
- * @LastEditors: ZhongJunWei
+ * @LastEditTime: 2022/10/18 17:58
+ * @LastEditors: Janaeiw
  * @FilePath: \vue3-vite2-h5-template-ynzy\src\test\testApi.vue
  * @Description: '测试api代理调试'
 -->
@@ -16,6 +16,7 @@
 <script setup lang="ts">
 import { Toast } from 'vant'
 import { login } from '@/api/authController'
+import { genUUID } from '@/utils/uuid'
 
 interface FormsType {
 	account?: string
@@ -25,7 +26,7 @@ interface FormsType {
 
 const forms: FormsType = {
 	account: 'frontend@cpapi.com',
-	password: 'Password123',
+	password: genUUID(8) + window.btoa('Password123'),
 	type: 'PASSWORD'
 }
 

@@ -17,6 +17,7 @@
 </template>
 <script setup lang="ts">
 import { fetchUserInfo, login } from '@/api/authController'
+import { genUUID } from '@/utils/uuid'
 import { useAuthStore } from '@/store/auth'
 import { Toast } from 'vant'
 
@@ -35,7 +36,7 @@ onMounted(async () => {
 		} else {
 			const data = {
 				account: 'frontend@cpapi.com',
-				password: 'Password123',
+				password: genUUID(8) + window.btoa('Password123'),
 				type: 'PASSWORD'
 			}
 			login(data)
