@@ -1,8 +1,8 @@
 <!--
  * @Author: ZhongJunWei
  * @Date: 2022/07/05 09:37
- * @LastEditTime: 2022/10/18 17:58
- * @LastEditors: Janaeiw
+ * @LastEditTime: 2023-03-15 13:08:18
+ * @LastEditors: zhongjunwei zhongjunwei@wisight.cn
  * @FilePath: \vue3-vite2-h5-template-ynzy\src\test\testApi.vue
  * @Description: '测试api代理调试'
 -->
@@ -26,7 +26,7 @@ interface FormsType {
 
 const forms: FormsType = {
 	account: 'frontend@cpapi.com',
-	password: genUUID(8) + window.btoa('Password123'),
+	password: genUUID(8) + window.btoa('Password123').split('').reverse().join(''),
 	type: 'PASSWORD'
 }
 
