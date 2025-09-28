@@ -3,57 +3,6 @@
 
 <!-- [查看 demo](https://vite-vue3-h5-template.vercel.app/) 建议手机端查看 -->
 
-* 用了 vite 的都说真香，到底有多香呢。我们先来看下重构后的开发启动速度，热更新速度，打包速度的对比吧
-
-# 原来 vue-cli 项目和现在 vite-vue 项目开发/生产速度对比
-
-## 开发启动速度对比
-
--   vue-cli
-
-    -   等了几秒 
-    
-
-![vuecli开发启动速度.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8685bc5c4c364e9387d5b02d712820f7~tplv-k3u1fbpfcp-watermark.image?)
-
--   vite-vue
-
-    -   几乎没等待 
-    
-
-![vite开发启动速度.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/24f9914377c14302ade61cc62dd41b5a~tplv-k3u1fbpfcp-watermark.image?)
-
--   总结：vite 启动速度 是 vue-cli 的 **5倍**！
-
-## 开发热更新速度对比
-
--   vue-cli
-
-    -   需要重新编译文件 
-    
-
-![vuelciHMR热更新速度.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/af25e09c8fd94134bea673e09b0c2d02~tplv-k3u1fbpfcp-watermark.image?)
-
--   vite-vue
-
-    -   几乎没有花时间，代码改了就生效了
-    
-
-![viteHMR热更新速度.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3deeac46eb1448fba50550292dd31a9d~tplv-k3u1fbpfcp-watermark.image?)
-
--   总结：vite 即时生效
-
-## 生产打包速度对比
-
--   vue-cli 
-
-![vuecli打包速度.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/73d50dc11382410ba895d6bfb3223156~tplv-k3u1fbpfcp-watermark.image?)
-
--   vite-vue 
-
-![vite打包速度.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/74e2122b1c634b3bb4ef1f6e959abcb2~tplv-k3u1fbpfcp-watermark.image?)
--   总结：几乎没什么差别
-
 # 项目介绍
 
 ## Node 版本要求
